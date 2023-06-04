@@ -36,7 +36,7 @@ try:
     app = win32com.client.Dispatch('Excel.Application')
     wb = app.Workbooks.Add()
 
-    if file_path.is_file:
+    if file_path.is_file():
         raise RuntimeError(f'{file_name} already exists!')
 
     # ↓↓↓ 処理を書く ↓↓↓
