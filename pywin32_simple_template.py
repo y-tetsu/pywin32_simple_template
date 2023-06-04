@@ -2,7 +2,7 @@ import win32com.client
 from pathlib import Path
 
 
-# Excelがすでに起動していたら閉じるようにする
+# Excelがすでに起動していたら閉じるよう警告する
 try:
     if win32com.client.GetObject(Class='Excel.Application'):
         raise RuntimeError('Close all Excel applications!')
@@ -11,7 +11,7 @@ except win32com.client.pywintypes.com_error:
     pass
 
 
-# 既存のExcelファイルを開いて何かする場合
+# 既存のExcelファイルを開いて何かする
 file_path = Path('読み込みたいファイル.xlsx')
 file_name = str(file_path.absolute())
 
@@ -28,7 +28,7 @@ finally:
     app.Quit()
 
 
-# 新規にExcelファイルを作って何かする場合
+# 新規にExcelファイルを作って何かする
 file_path = Path('書き込みたいファイル.xlsx')
 file_name = str(file_path.absolute())
 
