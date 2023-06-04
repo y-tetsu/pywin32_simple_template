@@ -1,0 +1,2 @@
+# pywin32_simple_template
+pywin32をサッと使う時のテンプレート
